@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  font-family: Tahoma;
+}
+
+.container{
+  max-width: 1200px;
+  margin: o auto;
+}
+
+.content{
+  min-height: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(62, 146, 204,1)0%,
+    rgba(19, 41, 61,1)70%
+
+  );
+}
+
+.menu{
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 16px;
+  padding: 20px;
+  color: #DEDEDE;
+  display: block;
+  font-weight: bold;
+}
+
+.menu .navbar ul li a:hover{
+  color: white;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono{
+  width: 25px;
+}
+
+.menu label{
+  cursor: pointer;
+  display: none;
+}
+
+h1 {
+  margin: 80px 0 0 250px;
+}
+
+h2 {
+  margin: 40px 0 50px 400px;
+}
+
+@media(max-width:991px) {
+  .content{
+    min-height: 90px;
+    }
+
+  .menu {
+    top: 0;
+    padding: 20px;
+  }
+
+  .menu label{
+    display: initial;
+  }
+  
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(62, 146, 204,1)0%,
+      rgba(19, 41, 61,1)70%
+    );
+    display: none;
+  }
+
+  .menu .navbar ul li{
+    width: 100%;
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+}
+
+.boton-container .switch {
+  height: 80px;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  padding: 0 1.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 80px 600px 0 400px;
+  display:inline-flex;
+}
+
+.boton-container .switch .input {
+  display: none;
+}
+
+.boton-container .switch .rail {
+  position: relative;
+  width: 88px;
+  height: 28px;
+  background-color: #fff;
+  border-radius: 3rem;
+}
+
+.boton-container .switch .rail .circle {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  transition: transform 0.4s;
+}
+
+.boton-container .switch .indicator {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+  transition: 0.4s;
+}
+
+.boton-container .switch .input:checked ~ .rail .circle {
+  transform: translate(52px, -50%);
+}
+
+.boton-container .switch .input:checked ~ .indicator {
+  background-color: #43e97b;
+}
